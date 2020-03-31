@@ -31,12 +31,13 @@ $(document).ready(function () {
     $("#17").val(localStorage.getItem("17"));
     
 
+    // Sync color columns with the time.
     var currentTime = moment().hours()
     $(".input").each(function () {
         var blockTime = parseInt($(this).attr("id"))
         if (blockTime < currentTime) {
             $(this).addClass("past");
-            $(`btn-#{blockTime}`)  
+            // $(`btn-#{blockTime}`)  
         }
         else if (blockTime === currentTime) {
             $(this).removeClass("past");
