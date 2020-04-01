@@ -34,19 +34,22 @@ $(document).ready(function () {
     // Sync color columns with the time.
     var currentTime = moment().hours()
     $(".input").each(function () {
-        var blockTime = parseInt($(this).attr("id"))
+        var blockTime = parseInt($(this).attr("id"));
+        console.log(blockTime, currentTime);
         if (blockTime < currentTime) {
             $(this).addClass("past");
-            // $(`btn-#{blockTime}`)  
+            $(`#btn-${blockTime}`).addClass("btn btn-secondary"); 
         }
         else if (blockTime === currentTime) {
             $(this).removeClass("past");
             $(this).addClass("present");
+            $(`#btn-${blockTime}`).addClass("btn btn-primary"); 
         }
         else {
             $(this).removeClass("past");
             $(this).removeClass("present");
             $(this).addClass("future");
+            $(`#btn-${blockTime}`).addClass("btn btn-warning"); 
         };
     });
 });
