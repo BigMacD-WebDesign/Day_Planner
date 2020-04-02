@@ -52,12 +52,12 @@ input {
 }
 
 .present {
-  background-color: green;
+  background-color: #ff6961;
   color: black;
 }
 
 .future {
-  background-color: #ff6961;
+  background-color: #00FF00;
   color: black;
 }
 
