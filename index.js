@@ -1,4 +1,3 @@
-// var storage = JSON.parse(localStorage.getItem("dayplanner")) || []; 
 $(document).ready(function () {
 
     //Date and Time
