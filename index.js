@@ -12,7 +12,6 @@ $(document).ready(function () {
         var value = $(`#${dateTime}`).val();
         localStorage.setItem(dateTime,value);
 
-        console.log(`value:${value} time:${dateTime}`);
     });
 
 
