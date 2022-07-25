@@ -4,22 +4,19 @@ $(document).ready(function () {
     //Date and Time
     let currentDateTime = moment().format('MMMM Do YYYY, h:mm:ss a');
     $("#currentDay").text(currentDateTime);
+    
 
     //Columns
     $(".save").on("click", function () {
         var dateTime = $(this).attr("date-time");
         var value = $(`#${dateTime}`).val();
-        var dTime = {
-            time:dateTime,
-            data:value,
-        };
         localStorage.setItem(dateTime,value);
 
         console.log(`value:${value} time:${dateTime}`);
     });
 
 
-    console.log(localStorage.getItem("9"));
+    
     $("#9").val(localStorage.getItem("9"));
     $("#10").val(localStorage.getItem("10"));
     $("#11").val(localStorage.getItem("11"));
@@ -35,7 +32,7 @@ $(document).ready(function () {
     var currentTime = moment().hours()
     $(".input").each(function () {
         var blockTime = parseInt($(this).attr("id"));
-        console.log(blockTime, currentTime);
+        
         if (blockTime < currentTime) {
             $(this).addClass("past");
             $(`#btn-${blockTime}`).addClass("btn btn-secondary"); 
